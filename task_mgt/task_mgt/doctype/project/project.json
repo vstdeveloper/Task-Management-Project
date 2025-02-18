@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:proj_name",
+ "creation": "2025-02-12 10:26:04.023831",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xrss",
+  "amended_from",
+  "proj_name",
+  "proj_desc",
+  "column_break_rkco",
+  "proj_manager",
+  "proj_ex_sd",
+  "proj_ex_ed",
+  "start_and_end_date_tab",
+  "proj_ac_sd",
+  "proj_ac_ed",
+  "ac_time_hr"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xrss",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "proj_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "proj_desc",
+   "fieldtype": "Data",
+   "label": "Project Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rkco",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "proj_manager",
+   "fieldtype": "Link",
+   "label": "Project Manager",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "proj_ex_sd",
+   "fieldtype": "Date",
+   "label": "Project Expected Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "proj_ex_ed",
+   "fieldtype": "Date",
+   "label": "Project Expected End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_and_end_date_tab",
+   "fieldtype": "Tab Break",
+   "label": "Start and End Date "
+  },
+  {
+   "fieldname": "proj_ac_sd",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Project Actual Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "proj_ac_ed",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Project Actual End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ac_time_hr",
+   "fieldtype": "Float",
+   "label": "Actual Time In Hours"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-14 10:56:30.981855",
+ "modified_by": "Administrator",
+ "module": "task_mgt",
+ "name": "Project",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Project Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Team Member",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,35 +1,15 @@
-# import requests
-# import json
+from frappeclient import FrappeClient
 
-# # Frappe site URL
-# url = "http://task.localhost/api/resource/Task"
+# Set up the connection with the Frappe site
+client = FrappeClient("http://task.localhost/api/resource/Task") 
 
-# # Data for the new Task (make sure field names match with the Task DocType)
-# data = {
-#         "task_title": "New api Task",   # Task title or subject
-#         "task_desc": "New api Task dec",
-#         "task_status": "New",                # Status of the task (e.g., Open, In Progress, etc.)
-#         "task_priority": "Low", 
-#         "task_assign": "ravi",
-#         "task_dd": "2025/03/15",           # Task priority (e.g., Low, Medium, High)
-#         "project": "Auction System"         # Optional: Link to the project this task belongs to
-#     }
+# Authenticate using your API key and secret
+client.authenticate("40a7c0423e65757", "f6b09bf77cfec2b")
 
+# Task ID to be deleted
+task_id = "536db15hkf "  # Replace with the task ID you want to delete
 
-# # Headers for the request (including Authorization for security)
-# headers = {
-#     "Authorization": "40a7c0423e65757:f6b09bf77cfec2b",  # Replace with your token
-#     "Content-Type": "application/json"
-# }
+# Delete the task
+client.delete('Task', task_id)
 
-# # Send the POST request to create the task
-# response = requests.post(url, data=json.dumps(data), headers=headers)
-
-# # Check and print response status and data
-# if response.status_code == 200:
-#     print("Task Created Successfully!")
-#     print("Response Data:", response.json())
-# else:
-#     print("Failed to create task")
-#     print("Status Code:", response.status_code)
-#     print("Response Text:", response.text)
+print(f"Task {task_id} deleted successfully!")

@@ -86,8 +86,7 @@
    "fieldname": "proj_ac_ed",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Project Actual End Date",
-   "reqd": 1
+   "label": "Project Actual End Date"
   },
   {
    "fieldname": "ac_time_hr",
@@ -98,7 +97,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-02-14 10:56:30.981855",
+ "modified": "2025-02-19 13:29:31.160170",
  "modified_by": "Administrator",
  "module": "task_mgt",
  "name": "Project",
